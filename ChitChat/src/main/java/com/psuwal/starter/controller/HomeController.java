@@ -26,13 +26,19 @@ public class HomeController {
 		return "index";
 	}
 	
+	@GetMapping("/addNewUser")
+	public String addUserPage() {
+		return "addUser";
+	}
+	
 	@GetMapping("/getAllUsers")
 	public List<User> getAllUsers(){
 		return userService.getAllUsers();
 	}
 	
 	@PostMapping("/addUser")
-	public User addUser(@RequestBody User user) {
-		return userService.addUser(user);
+	public String addUser(@RequestBody User user) {
+		userService.addUser(user);
+		return "redirect:home";
 	}	
 }
