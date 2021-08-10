@@ -8,6 +8,7 @@ public class ChitChatApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ChitChatApplication.class, args);
+		//this is a test
 	}
 
 }
